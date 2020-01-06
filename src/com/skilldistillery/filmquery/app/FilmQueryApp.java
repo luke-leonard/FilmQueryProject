@@ -7,13 +7,13 @@ import com.skilldistillery.filmquery.database.DatabaseAccessorObject;
 import com.skilldistillery.filmquery.entities.Film;
 
 public class FilmQueryApp {
-  
+   
   DatabaseAccessor db = new DatabaseAccessorObject();
 
   public static void main(String[] args) {
     FilmQueryApp app = new FilmQueryApp();
     app.test();
-//    app.launch();
+    app.launch();
   }
 
   private void test() {
