@@ -16,7 +16,9 @@ public class Film {
 	private double replacementCost; 
 	private String rating;
 	private String specialFeatures;
+	
 	private List<Actor> actors;
+	private String language;
 	
 	// C O N S T R U C T O R S
 	public Film() {
@@ -38,6 +40,24 @@ public class Film {
 		this.specialFeatures = specialFeatures;
 	}
 
+	public Film(int id, String title, String description, int releaseYear, int languageId, int rentalDuration,
+			double rentalRate, int length, double replacementCost, String rating, String specialFeatures,
+			String language) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.description = description;
+		this.releaseYear = releaseYear;
+		this.languageId = languageId;
+		this.rentalDuration = rentalDuration;
+		this.rentalRate = rentalRate;
+		this.length = length;
+		this.replacementCost = replacementCost;
+		this.rating = rating;
+		this.specialFeatures = specialFeatures;
+		this.language = language;
+	}
+	
 	// G E T T E R S _ A N D _ S E T T E R S
 	public int getId() {
 		return id;
@@ -112,6 +132,12 @@ public class Film {
 	public void setActors(List<Actor> actors) {
 		this.actors = actors;
 	}
+	public String getLanguage() {
+		return language;
+	}
+	public void setLanguage(String language) {
+		this.language = language;
+	}
 	
 	// A U T O _ G E N E R A T E D _ M E T H O D S
 	@Override
@@ -181,29 +207,19 @@ public class Film {
 	}
 	@Override
 	public String toString() {
-		return "Film [id=" +
+		return "id:" +
 				id +
-				", title=" +
+				", Title=" +
 				title +
-				", description=" +
-				description +
-				", releaseYear=" +
+				", Year=" +
 				releaseYear +
-				", languageId=" +
-				languageId +
-				", rentalDuration=" +
-				rentalDuration +
-				", rentalRate=" +
-				rentalRate +
-				", length=" +
-				length +
-				", replacementCost=" +
-				replacementCost +
-				", rating=" +
+				", Rating=" +
 				rating +
-				", specialFeatures=" +
-				specialFeatures +
-				"]";
+				", Description=" +
+				description +
+				", Language =" +
+				language;
 	}
+
 	
 }
